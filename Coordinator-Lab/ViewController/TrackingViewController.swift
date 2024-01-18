@@ -14,6 +14,34 @@ final class TrackingViewController: TestViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupEvent()
         viewLabel.text = "TrackingViewController"
+    }
+    
+    deinit {
+        coordinator?.remove()
+    }
+    
+    private func setupEvent() {
+        
+        firstButton.setTitle("Block", for: .normal)
+        firstButton.addTarget(
+            self,
+            action: #selector(pushBlockView),
+            for: .touchUpInside
+        )
+        
+//        secondButton.addTarget(
+//            self,
+//            action: #selector(pushCalendarView),
+//            for: .touchUpInside
+//        )
+    }
+}
+
+// MARK: - Event Method
+extension TrackingViewController {
+    @objc private func pushBlockView() {
+        coordinator?.pushBlockView()
     }
 }

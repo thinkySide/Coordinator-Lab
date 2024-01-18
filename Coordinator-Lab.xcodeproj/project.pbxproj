@@ -19,6 +19,10 @@
 		07EBDCF82B58FFF700A10A99 /* TrackingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBDCF72B58FFF700A10A99 /* TrackingCoordinator.swift */; };
 		07EBDCFB2B5900D400A10A99 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBDCFA2B5900D400A10A99 /* TestViewController.swift */; };
 		07EBDCFE2B59010B00A10A99 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 07EBDCFD2B59010B00A10A99 /* SnapKit */; };
+		07EBDD002B59070100A10A99 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBDCFF2B59070100A10A99 /* CalendarViewController.swift */; };
+		07EBDD022B59071900A10A99 /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBDD012B59071900A10A99 /* CalendarCoordinator.swift */; };
+		07EBDD042B59095000A10A99 /* BlockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBDD032B59095000A10A99 /* BlockCoordinator.swift */; };
+		07EBDD062B59096C00A10A99 /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBDD052B59096C00A10A99 /* BlockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		07EBDCF52B58FCED00A10A99 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		07EBDCF72B58FFF700A10A99 /* TrackingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingCoordinator.swift; sourceTree = "<group>"; };
 		07EBDCFA2B5900D400A10A99 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		07EBDCFF2B59070100A10A99 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		07EBDD012B59071900A10A99 /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
+		07EBDD032B59095000A10A99 /* BlockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCoordinator.swift; sourceTree = "<group>"; };
+		07EBDD052B59096C00A10A99 /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 				07EBDCF02B58F73900A10A99 /* AppCoordinator.swift */,
 				07EBDCF52B58FCED00A10A99 /* HomeCoordinator.swift */,
 				07EBDCF72B58FFF700A10A99 /* TrackingCoordinator.swift */,
+				07EBDD012B59071900A10A99 /* CalendarCoordinator.swift */,
+				07EBDD032B59095000A10A99 /* BlockCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -96,6 +106,8 @@
 			children = (
 				07EBDCDD2B58F0C800A10A99 /* HomeViewController.swift */,
 				07EBDCF32B58FB9300A10A99 /* TrackingViewController.swift */,
+				07EBDCFF2B59070100A10A99 /* CalendarViewController.swift */,
+				07EBDD052B59096C00A10A99 /* BlockViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -184,12 +196,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EBDD002B59070100A10A99 /* CalendarViewController.swift in Sources */,
 				07EBDCEF2B58F5E500A10A99 /* Coordinator.swift in Sources */,
 				07EBDCDE2B58F0C800A10A99 /* HomeViewController.swift in Sources */,
 				07EBDCF12B58F73900A10A99 /* AppCoordinator.swift in Sources */,
 				07EBDCF82B58FFF700A10A99 /* TrackingCoordinator.swift in Sources */,
 				07EBDCF42B58FB9300A10A99 /* TrackingViewController.swift in Sources */,
 				07EBDCDA2B58F0C800A10A99 /* AppDelegate.swift in Sources */,
+				07EBDD022B59071900A10A99 /* CalendarCoordinator.swift in Sources */,
+				07EBDD062B59096C00A10A99 /* BlockViewController.swift in Sources */,
+				07EBDD042B59095000A10A99 /* BlockCoordinator.swift in Sources */,
 				07EBDCF62B58FCED00A10A99 /* HomeCoordinator.swift in Sources */,
 				07EBDCFB2B5900D400A10A99 /* TestViewController.swift in Sources */,
 				07EBDCDC2B58F0C800A10A99 /* SceneDelegate.swift in Sources */,

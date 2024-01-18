@@ -20,4 +20,15 @@ protocol Coordinator: AnyObject {
     
     /// Coordinator 설정 완료
     func start()
+    
+    /// 화면이 사라질 때 메모리에서 삭제하기 위한 메서드
+    func remove()
+}
+
+extension Coordinator {
+    
+    /// 자식 코디네이터의 메모리 해제를 위한 메서드
+    func removeChildCoordinator(child: Coordinator) {
+        childCoordinators.removeAll { $0 === child }
+    }
 }

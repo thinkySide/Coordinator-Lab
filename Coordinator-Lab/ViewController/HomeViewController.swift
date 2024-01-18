@@ -20,9 +20,17 @@ final class HomeViewController: TestViewController {
     }
     
     private func setupEvent() {
-        pushButton.addTarget(
+        firstButton.setTitle("Tracking", for: .normal)
+        firstButton.addTarget(
             self,
             action: #selector(pushTrackingView),
+            for: .touchUpInside
+        )
+        
+        secondButton.setTitle("Calendar", for: .normal)
+        secondButton.addTarget(
+            self,
+            action: #selector(pushCalendarView),
             for: .touchUpInside
         )
     }
@@ -32,6 +40,10 @@ final class HomeViewController: TestViewController {
 extension HomeViewController {
     @objc private func pushTrackingView() {
         coordinator?.pushTrackingView()
+    }
+    
+    @objc private func pushCalendarView() {
+        coordinator?.pushCalendarView()
     }
 }
 

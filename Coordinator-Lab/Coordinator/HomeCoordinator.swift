@@ -11,7 +11,7 @@ import UIKit
 final class HomeCoordinator: Coordinator {
     
     var navigationController: UINavigationController
-    var parentCoordinator: Coordinator?
+    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     
     init(navigationController: UINavigationController) {
@@ -28,6 +28,9 @@ final class HomeCoordinator: Coordinator {
         print("HomeCoordinator parent: \(parentCoordinator)")
         print("HomeCoordinator childs: \(childCoordinators)\n")
     }
+    
+    /// 최상위 Coordinator는 해제되면 안됨
+    func remove() {}
 }
 
 // MARK: - 화면 전환 메서드
@@ -40,5 +43,14 @@ extension HomeCoordinator {
         childCoordinators.append(trackingCoordinator)
         trackingCoordinator.parentCoordinator = self
         trackingCoordinator.start()
+    }
+    
+    /// 캘린더 뷰로 Push 메서드
+    func pushCalendarView() {
+        let calendarCoordinator = CalendarCoordinator(navigationController: navigationController)
+        
+        childCoordinators.append(calendarCoordinator)
+        calendarCoordinator.parentCoordinator = self
+        calendarCoordinator.start()
     }
 }

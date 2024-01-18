@@ -11,7 +11,7 @@ import UIKit
 final class AppCoordinator: Coordinator {
     
     var navigationController: UINavigationController
-    var parentCoordinator: Coordinator?
+    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     
     init(navigationController: UINavigationController) {
@@ -35,4 +35,7 @@ final class AppCoordinator: Coordinator {
         
         print("AppCoordinator childs: \(childCoordinators)\n")
     }
+    
+    /// 최상위 Coordinaotr는 해제되면 안됨
+    func remove() {}
 }

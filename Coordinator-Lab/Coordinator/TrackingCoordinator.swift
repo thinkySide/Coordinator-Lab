@@ -11,7 +11,7 @@ import UIKit
 final class TrackingCoordinator: Coordinator {
     
     var navigationController: UINavigationController
-    var parentCoordinator: Coordinator?
+    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     
     init(navigationController: UINavigationController) {
@@ -27,5 +27,19 @@ final class TrackingCoordinator: Coordinator {
         
         print("TrackingCoordinator parent: \(parentCoordinator)")
         print("TrackingCoordinator childs: \(childCoordinators)\n")
+    }
+    
+    func remove() {
+        parentCoordinator?.removeChildCoordinator(child: self)
+    }
+}
+
+// MARK: - 화면 전환 메서드
+extension TrackingCoordinator {
+    func pushBlockView() {
+        let blockCoordinator = BlockCoordinator(navigationController: navigationController)
+        childCoordinators.append(blockCoordinator)
+        blockCoordinator.parentCoordinator = self
+        blockCoordinator.start()
     }
 }
